@@ -1,3 +1,9 @@
+""" Copyright start
+  Copyright (C) 2008 - 2025 Fortinet Inc.
+  All rights reserved.
+  FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
+  Copyright end """
+
 """
 FortiCASB REST Client implementation
 Updated to consolidate token management, API call handling, and additional header support

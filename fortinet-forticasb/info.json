@@ -1,19 +1,15 @@
 {
   "name": "fortinet-forticasb",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "label": "Fortinet FortiCASB",
-  "description": "FortiCASB Top Cloud Access Security Broker designed to provide visibility, compliance, data security, and threat protection for cloud-based services being used by an organization",
+  "description": "FortiCASB (Cloud Access Security Broker) is Fortinet’s cloud-native CASB solution, designed for comprehensive visibility, compliance, data security, and threat protection across SaaS and IaaS environments via API integration.",
   "publisher": "Fortinet",
-    "icon_small_name": "small_icon.png",
-    "icon_large_name": "large_icon.png",
+  "icon_small_name": "small_icon.png",
+  "icon_large_name": "large_icon.png",
   "cs_approved": true,
   "cs_compatible": true,
-    "category": "Investigation",
-    "help_online": "https://docs.fortinet.com/document/fortisoar/1.2.0/forticasb/66/forticasb-v1-0-0",
-  "ingestion_supported": true,
-    "ingestion_modes": [
-        "scheduled"
-    ],
+  "category": "Cloud access security broker (CASB)",
+  "help_online": "",
   "configuration": {
     "fields": [
       {
@@ -256,8 +252,20 @@
       "enabled": true,
       "parameters": [
         {
+          "name": "service",
+          "title": "Service",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "description": "Cloud service name such as AWSS3, Salesforce, Office365, etc.",
+          "tooltip": "Cloud service name such as AWSS3, Salesforce, Office365, etc.",
+          "isOnChange": false,
+          "onchange": {}
+        },
+        {
           "name": "startTime",
-          "title": "StartTime",
+          "title": "Start Time",
           "type": "datetime",
           "editable": true,
           "visible": true,
@@ -269,24 +277,13 @@
         },
         {
           "name": "endTime",
-          "title": "EndTime",
+          "title": "End Time",
           "type": "datetime",
           "editable": true,
           "visible": true,
           "required": false,
           "tooltip": "By default, the value is current time. Difference between start time and end time should not be greater than 1 Year.",
           "description": "(Optional) Specify the end time for search. Supported time formats: yyyy-MM-dd, yyyy-MM-ddTHH, yyyy-MM-ddTHH:mm:ssZ, yyyy-MM-ddTHH:mm:ss.SSSZ.",
-          "isOnChange": false,
-          "onchange": {}
-        },
-        {
-          "name": "service",
-          "title": "Service",
-          "type": "text",
-          "editable": true,
-          "visible": true,
-          "required": true,
-          "description": "Cloud service name such as AWSS3, Salesforce, Office365, etc.",
           "isOnChange": false,
           "onchange": {}
         },
@@ -298,6 +295,7 @@
           "visible": true,
           "required": false,
           "description": "Filter to search user email using a comma separated list.",
+          "tooltip": "Filter to search user email using a comma separated list.",
           "isOnChange": false,
           "onchange": {}
         },
@@ -309,6 +307,7 @@
           "visible": true,
           "required": false,
           "description": "Filter to search alert id using a comma separated list.",
+          "tooltip": "Filter to search alert id using a comma separated list.",
           "isOnChange": false,
           "onchange": {}
         },
@@ -320,28 +319,31 @@
           "visible": true,
           "required": false,
           "description": "Filter to search alert by activities using a comma separated list.",
+          "tooltip": "Filter to search alert by activities using a comma separated list.",
           "isOnChange": false,
           "onchange": {}
         },
         {
           "name": "objectidlist",
-          "title": "ObjectidList",
+          "title": "Object IDs",
           "type": "text",
           "editable": true,
           "visible": true,
           "required": false,
           "description": "Filter to search alert by object identity using a comma separated list.",
+          "tooltip": "Filter to search alert by object identity using a comma separated list.",
           "isOnChange": false,
           "onchange": {}
         },
         {
           "name": "objectname",
-          "title": "ObjectName",
+          "title": "Object Name",
           "type": "text",
           "editable": true,
           "visible": true,
           "required": false,
           "description": "Filter to search alert by object name",
+          "tooltip": "Filter to search alert by object name",
           "isOnChange": false,
           "onchange": {}
         },
@@ -353,6 +355,7 @@
           "visible": true,
           "required": false,
           "description": "Filter to search alert by severity using a comma separated list.",
+          "tooltip": "Filter to search alert by severity using a comma separated list.",
           "isOnChange": false,
           "onchange": {}
         },
@@ -364,55 +367,106 @@
           "visible": true,
           "required": false,
           "description": "Filter to search by status using a comma separated list.",
+          "tooltip": "Filter to search by status using a comma separated list.",
           "isOnChange": false,
           "onchange": {}
         },
         {
           "name": "idList",
-          "title": "IdList",
+          "title": "Alert IDs",
           "type": "text",
           "editable": true,
           "visible": true,
           "required": false,
           "description": "Filter to search alert by alert IDs using a comma separated list.",
+          "tooltip": "Filter to search alert by alert IDs using a comma separated list.",
           "isOnChange": false,
           "onchange": {}
         },
         {
           "name": "alerttype",
-          "title": "AlertType",
+          "title": "Alert Type",
           "type": "text",
           "editable": true,
           "visible": true,
           "required": false,
           "description": "Filter to search alert by alert types using a comma separated list.",
+          "tooltip": "Filter to search alert by alert types using a comma separated list.",
           "isOnChange": false,
           "onchange": {}
         },
         {
           "name": "countrylist",
-          "title": "CountryList",
+          "title": "Country List",
           "type": "text",
           "editable": true,
           "visible": true,
           "required": false,
           "description": "Filter to search alert by countries using a comma separated list.",
+          "tooltip": "Filter to search alert by countries using a comma separated list.",
           "isOnChange": false,
           "onchange": {}
         },
         {
           "name": "businessunitname",
-          "title": "BusinessUnitName",
+          "title": "Business Unit Name",
           "type": "text",
           "editable": true,
           "visible": true,
           "required": false,
           "description": "Filter to search alert by business unit name.",
+          "tooltip": "Filter to search alert by business unit name.",
           "isOnChange": false,
           "onchange": {}
         }
       ],
-      "output_schema": ""
+      "output_schema": {
+        "alerts": [
+          {
+            "id": "",
+            "buId": "",
+            "user": "",
+            "fileId": "",
+            "object": "",
+            "region": "",
+            "userId": "",
+            "eventId": "",
+            "matches": "",
+            "service": "",
+            "objectId": "",
+            "policyId": "",
+            "severity": "",
+            "userName": "",
+            "alertType": "",
+            "companyId": "",
+            "createTime": "",
+            "defineType": "",
+            "objectType": "",
+            "policyCode": "",
+            "policyName": "",
+            "resultDesc": "",
+            "updateTime": "",
+            "contextName": "",
+            "description": "",
+            "eventIdList": [],
+            "applicationId": "",
+            "objectContext": "",
+            "timestampUUID": "",
+            "geoLocationList": [
+              {
+                "ip": "",
+                "city": "",
+                "geonameId": "",
+                "countryCode": "",
+                "countryName": ""
+              }
+            ],
+            "displayOperation": "",
+            "violationActivity": ""
+          }
+        ],
+        "file_details": {}
+      }
     },
     {
       "operation": "get_file_summary",
@@ -481,7 +535,134 @@
       "visible": true,
       "enabled": true,
       "parameters": [],
-      "output_schema": {}
+      "output_schema": {
+        "policies": [
+          {
+            "msg": "",
+            "code": "",
+            "data": {
+              "skip": "",
+              "datas": [
+                {
+                  "id": "",
+                  "apps": [
+                    {
+                      "code": "",
+                      "name": "",
+                      "enabled": "",
+                      "displayName": ""
+                    }
+                  ],
+                  "name": "",
+                  "fazLog": "",
+                  "enabled": "",
+                  "ocrScan": "",
+                  "bizUnitId": "",
+                  "companyId": "",
+                  "fileTypes": [
+                    {
+                      "code": "",
+                      "name": "",
+                      "enabled": "",
+                      "displayName": ""
+                    }
+                  ],
+                  "startTime": "",
+                  "activities": [
+                    {
+                      "code": "",
+                      "name": "",
+                      "enabled": "",
+                      "timeUnit": "",
+                      "displayName": "",
+                      "enableThreshold": ""
+                    }
+                  ],
+                  "predefined": "",
+                  "finPatterns": [
+                    {
+                      "code": "",
+                      "name": "",
+                      "enabled": "",
+                      "category": "",
+                      "severity": "",
+                      "displayName": ""
+                    }
+                  ],
+                  "lastUpdated": "",
+                  "notifyUsers": "",
+                  "ocrLicensed": "",
+                  "piiPatterns": [
+                    {
+                      "code": "",
+                      "name": "",
+                      "enabled": "",
+                      "category": "",
+                      "severity": "",
+                      "displayName": ""
+                    }
+                  ],
+                  "writeLabels": "",
+                  "notifyOwners": "",
+                  "ocrImageTypes": [
+                    {
+                      "code": "",
+                      "name": "",
+                      "enabled": "",
+                      "displayName": ""
+                    }
+                  ],
+                  "userTrustList": [],
+                  "usersToNotify": [],
+                  "auGroupDtoList": [],
+                  "domainTrustList": [],
+                  "malwarePatterns": [
+                    {
+                      "code": "",
+                      "name": "",
+                      "enabled": "",
+                      "category": "",
+                      "severity": "",
+                      "displayName": ""
+                    }
+                  ],
+                  "filesAddedWithin": {
+                    "code": "",
+                    "name": "",
+                    "displayName": ""
+                  },
+                  "permitQuarantine": "",
+                  "accessPermissions": [
+                    {
+                      "code": "",
+                      "name": "",
+                      "enabled": "",
+                      "displayName": ""
+                    }
+                  ],
+                  "selectAllSaasApps": "",
+                  "customizedPatterns": [],
+                  "selectAllFileTypes": "",
+                  "enableAllFinPatterns": "",
+                  "enableAllPiiPatterns": "",
+                  "changeAccessPermission": "",
+                  "selectAllOcrImageTypes": "",
+                  "selectAllFileActivities": "",
+                  "enableAllMalwarePatterns": "",
+                  "permitQuarantineViolation": "",
+                  "changeAccessPermissionType": "",
+                  "selectAllAccessPermissions": "",
+                  "enableAllCustomizedPatterns": ""
+                }
+              ],
+              "limit": "",
+              "totalPage": "",
+              "totalCount": ""
+            },
+            "httpCode": ""
+          }
+        ]
+      }
     },
     {
       "operation": "get_datapatterns",
@@ -493,7 +674,35 @@
       "visible": true,
       "enabled": true,
       "parameters": [],
-      "output_schema": {}
+      "output_schema": {
+        "datapatterns": [
+          {
+            "id": "",
+            "buId": "",
+            "name": "",
+            "type": "",
+            "dpCode": "",
+            "fileExt": [],
+            "updateTime": "",
+            "createdTime": "",
+            "maxFileSize": "",
+            "matchingThreshold": "",
+            "patternRegexInfoList": [
+              {
+                "id": "",
+                "name": "",
+                "regex": "",
+                "maskChars": "",
+                "isPredefine": "",
+                "patternType": "",
+                "marginLength": "",
+                "maskRegexPattern": ""
+              }
+            ],
+            "maxCompressedFileSize": ""
+          }
+        ]
+      }
     },
     {
       "operation": "search_activity",
@@ -507,7 +716,7 @@
       "parameters": [
         {
           "name": "startTime",
-          "title": "StartTime",
+          "title": "Start Time",
           "type": "datetime",
           "editable": true,
           "visible": true,
@@ -519,7 +728,7 @@
         },
         {
           "name": "endTime",
-          "title": "EndTime",
+          "title": "End Time",
           "type": "datetime",
           "editable": true,
           "visible": true,
@@ -535,30 +744,33 @@
           "type": "text",
           "editable": true,
           "visible": true,
-          "required": true,
+          "required": false,
           "description": "Cloud service name such as AWSS3, Salesforce, Office365, etc.",
+          "tooltip": "Cloud service name such as AWSS3, Salesforce, Office365, etc.",
           "isOnChange": false,
           "onchange": {}
         },
         {
           "name": "cityList",
-          "title": "CityList",
+          "title": "City List",
           "type": "text",
           "editable": true,
           "visible": true,
           "required": false,
           "description": "Filter to search by city using a comma separated list.",
+          "tooltip": "Filter to search by city using a comma separated list.",
           "isOnChange": false,
           "onchange": {}
         },
         {
           "name": "idList",
-          "title": "idList",
+          "title": "Activity IDs",
           "type": "text",
           "editable": true,
           "visible": true,
           "required": false,
           "description": "Filter to search by activity id using a comma separated list.",
+          "tooltip": "Filter to search by activity id using a comma separated list.",
           "isOnChange": false,
           "onchange": {}
         },
@@ -570,33 +782,83 @@
           "visible": true,
           "required": false,
           "description": "Filter to search by activity type using a comma separated list (e.g. Upload File, Delete File, Restore File, Download File, Share File, Copy File, Add Folder).",
+          "tooltip": "Filter to search by activity type using a comma separated list (e.g. Upload File, Delete File, Restore File, Download File, Share File, Copy File, Add Folder).",
           "isOnChange": false,
           "onchange": {}
         },
         {
           "name": "ipList",
-          "title": "ipList",
+          "title": "IP List",
           "type": "text",
           "editable": true,
           "visible": true,
           "required": false,
           "description": "Filter to search by IP address using a comma separated list.",
+          "tooltip": "Filter to search by IP address using a comma separated list.",
           "isOnChange": false,
           "onchange": {}
         },
         {
           "name": "objectname",
-          "title": "ObjectName",
+          "title": "Object Name",
           "type": "text",
           "editable": true,
           "visible": true,
           "required": false,
           "description": "Filter to search by object name",
+          "tooltip": "Filter to search by object name",
           "isOnChange": false,
           "onchange": {}
         }
       ],
-      "output_schema": {}
+      "output_schema": {
+        "activities": [
+          {
+            "size": "",
+            "type": "",
+            "user": "",
+            "alert": "",
+            "fileId": "",
+            "folder": "",
+            "object": "",
+            "region": "",
+            "result": "",
+            "userId": "",
+            "eventId": "",
+            "hasLink": "",
+            "rawData": "",
+            "service": "",
+            "fileName": "",
+            "objectId": "",
+            "companyId": "",
+            "isDisplay": "",
+            "operation": "",
+            "timestamp": "",
+            "hasContent": "",
+            "objectType": "",
+            "subscriber": "",
+            "alertIdList": [],
+            "displayTime": "",
+            "downloadUrl": "",
+            "eventIDLink": "",
+            "objectContext": "",
+            "timestampUUID": "",
+            "geoLocationList": [
+              {
+                "ip": "",
+                "city": "",
+                "geonameId": "",
+                "countryCode": "",
+                "countryName": ""
+              }
+            ],
+            "parentCompanyId": "",
+            "displayOperation": "",
+            "fromNotification": "",
+            "doNotNotifyPolicyWorker": ""
+          }
+        ]
+      }
     }
   ]
 }
