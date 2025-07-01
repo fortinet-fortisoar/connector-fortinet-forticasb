@@ -475,8 +475,8 @@
       "description": "Retrieve the details of a file.",
       "category": "investigation",
       "is_config_required": true,
-      "visible": true,
-      "enabled": true,
+      "visible": false,
+      "enabled": false,
       "parameters": [],
       "output_schema": {
         "data": {

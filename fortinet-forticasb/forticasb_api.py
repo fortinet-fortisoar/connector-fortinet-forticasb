@@ -1,8 +1,9 @@
-""" Copyright start
-  Copyright (C) 2008 - 2025 Fortinet Inc.
-  All rights reserved.
-  FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
-  Copyright end """
+"""
+Copyright start
+MIT License
+Copyright (c) 2024 Fortinet Inc
+Copyright end
+"""
 
 """
 FortiCASB REST Client implementation
