@@ -88,7 +88,8 @@ def search_alerts(config, params):
         if params.get(key):
             # For list-type parameters, split by comma; otherwise use the provided value.
             if key in ['user', 'policy', 'activity', 'objectIdList', 'severity', 'status', 'idList', 'alertType', 'countryList']:
-                payload[key] = [s.strip() for s in params.get(key).split(",")]
+                payload[key] = [s.strip()
+                                for s in str(params.get(key)).split(",")]
             else:
                 payload[key] = params.get(key)
         else:
