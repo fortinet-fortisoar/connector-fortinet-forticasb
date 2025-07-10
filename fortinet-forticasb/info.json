@@ -270,7 +270,7 @@
           "editable": true,
           "visible": true,
           "required": false,
-          "tooltip": "By default, the value is 24 hours before the current time. Difference between start time and end time should not be greater than 1 Year.",
+          "tooltip": "By default, the value is 7 days before the current time. Difference between start time and end time should not be greater than 1 Year.",
           "description": "(Optional) Specify the start time for search. Supported time formats: yyyy-MM-dd, yyyy-MM-ddTHH, yyyy-MM-ddTHH:mm:ssZ, yyyy-MM-ddTHH:mm:ss.SSSZ.",
           "isOnChange": false,
           "onchange": {}
@@ -312,42 +312,6 @@
           "onchange": {}
         },
         {
-          "name": "activity",
-          "title": "Activity",
-          "type": "text",
-          "editable": true,
-          "visible": true,
-          "required": false,
-          "description": "Filter to search alert by activities using a comma separated list.",
-          "tooltip": "Filter to search alert by activities using a comma separated list.",
-          "isOnChange": false,
-          "onchange": {}
-        },
-        {
-          "name": "objectidlist",
-          "title": "Object IDs",
-          "type": "text",
-          "editable": true,
-          "visible": true,
-          "required": false,
-          "description": "Filter to search alert by object identity using a comma separated list.",
-          "tooltip": "Filter to search alert by object identity using a comma separated list.",
-          "isOnChange": false,
-          "onchange": {}
-        },
-        {
-          "name": "objectname",
-          "title": "Object Name",
-          "type": "text",
-          "editable": true,
-          "visible": true,
-          "required": false,
-          "description": "Filter to search alert by object name",
-          "tooltip": "Filter to search alert by object name",
-          "isOnChange": false,
-          "onchange": {}
-        },
-        {
           "name": "severity",
           "title": "Severity",
           "type": "text",
@@ -380,30 +344,6 @@
           "required": false,
           "description": "Filter to search alert by alert IDs using a comma separated list.",
           "tooltip": "Filter to search alert by alert IDs using a comma separated list.",
-          "isOnChange": false,
-          "onchange": {}
-        },
-        {
-          "name": "alerttype",
-          "title": "Alert Type",
-          "type": "text",
-          "editable": true,
-          "visible": true,
-          "required": false,
-          "description": "Filter to search alert by alert types using a comma separated list.",
-          "tooltip": "Filter to search alert by alert types using a comma separated list.",
-          "isOnChange": false,
-          "onchange": {}
-        },
-        {
-          "name": "countrylist",
-          "title": "Country List",
-          "type": "text",
-          "editable": true,
-          "visible": true,
-          "required": false,
-          "description": "Filter to search alert by countries using a comma separated list.",
-          "tooltip": "Filter to search alert by countries using a comma separated list.",
           "isOnChange": false,
           "onchange": {}
         },
@@ -721,7 +661,7 @@
           "editable": true,
           "visible": true,
           "required": false,
-          "tooltip": "By default, the value is 24 hours before the current time. Difference between start time and end time should not be greater than 1 Year.",
+          "tooltip": "By default, the value is 7 days before the current time. Difference between start time and end time should not be greater than 1 Year.",
           "description": "(Optional) Specify the start time for search. Supported time formats: yyyy-MM-dd, yyyy-MM-ddTHH, yyyy-MM-ddTHH:mm:ssZ, yyyy-MM-ddTHH:mm:ss.SSSZ.",
           "isOnChange": false,
           "onchange": {}
@@ -751,18 +691,6 @@
           "onchange": {}
         },
         {
-          "name": "cityList",
-          "title": "City List",
-          "type": "text",
-          "editable": true,
-          "visible": true,
-          "required": false,
-          "description": "Filter to search by city using a comma separated list.",
-          "tooltip": "Filter to search by city using a comma separated list.",
-          "isOnChange": false,
-          "onchange": {}
-        },
-        {
           "name": "idList",
           "title": "Activity IDs",
           "type": "text",
@@ -776,7 +704,7 @@
         },
         {
           "name": "activity",
-          "title": "Activity",
+          "title": "Activity Type",
           "type": "text",
           "editable": true,
           "visible": true,
@@ -795,18 +723,6 @@
           "required": false,
           "description": "Filter to search by IP address using a comma separated list.",
           "tooltip": "Filter to search by IP address using a comma separated list.",
-          "isOnChange": false,
-          "onchange": {}
-        },
-        {
-          "name": "objectname",
-          "title": "Object Name",
-          "type": "text",
-          "editable": true,
-          "visible": true,
-          "required": false,
-          "description": "Filter to search by object name",
-          "tooltip": "Filter to search by object name",
           "isOnChange": false,
           "onchange": {}
         }
