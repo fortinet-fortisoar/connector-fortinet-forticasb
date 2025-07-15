@@ -82,7 +82,8 @@ def search_alerts(config, params):
 
     payload['skip'] = int(params.get('skip')) if params.get('skip') else 0
     payload['limit'] = int(params.get('limit')) if params.get('limit') else 100
-
+    if params.get('policy') and isinstance(params.get('policy'), list):
+        params['policy'] = ",".join(str(x) for x in params.get('policy'))
     # Process additional optional parameters
     for key in ['user', 'policy', 'activity', 'objectIdList', 'severity', 'status', 'idList', 'alertType', 'countryList', 'asc', 'desc']:
         if params.get(key):

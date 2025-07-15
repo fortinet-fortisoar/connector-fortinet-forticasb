@@ -9,7 +9,7 @@
   "cs_approved": true,
   "cs_compatible": true,
   "category": "Cloud access security broker (CASB)",
-  "help_online": "",
+  "help_online": "https://docs.fortinet.com/document/fortisoar/1.0.0/fortinet-forticasb/1752225499/fortinet-forticasb-v1-0-0",
   "configuration": {
     "fields": [
       {
@@ -19,8 +19,8 @@
         "editable": true,
         "visible": true,
         "required": true,
-        "tooltip": "Specify the URL to which you will connect and perform the automated operations.",
-        "description": "Specify the URL of the FortiCASB server to connect and perform the automated operations.",
+        "tooltip": "Specify the URL of the FortiCASB server to which you will connect and perform the automated operations. ",
+        "description": "Specify the URL of the FortiCASB server to which you will connect and perform the automated operations. ",
         "isOnChange": false,
         "onchange": {}
       },
@@ -31,8 +31,8 @@
         "editable": true,
         "visible": true,
         "required": true,
-        "tooltip": "Specify the API key that is configured for your account to access the FortiCASB endpoint.",
-        "description": "Specify the API key configured for your account to access the FortiCASB endpoint.",
+        "tooltip": "Specify the API key configured for your account to access the FortiCASB endpoint and authenticate API requests.",
+        "description": "Specify the API key configured for your account to access the FortiCASB endpoint and authenticate API requests.",
         "isOnChange": false,
         "onchange": {}
       },
@@ -44,8 +44,8 @@
         "visible": true,
         "required": false,
         "value": true,
-        "tooltip": "Specifies whether the SSL certificate for the server is to be verified or not. By default, this option is set as True.",
-        "description": "Specifies whether the SSL certificate for the server is to be verified. By default, this option is selected, i.e., set to true.",
+        "tooltip": "Specifies whether to verify the server's SSL certificate. By default, this option is enabled, i.e., set to true.",
+        "description": "Specifies whether to verify the server's SSL certificate. By default, this option is enabled, i.e., set to true.",
         "isOnChange": false,
         "onchange": {}
       }
@@ -245,7 +245,7 @@
       "operation": "search_alerts",
       "title": "Search Alerts",
       "annotation": "search_alerts",
-      "description": "Retrieves a list of alerts.",
+      "description": "Retrieves a list of alerts filtered by the specified cloud service name and other input parameters. ",
       "category": "investigation",
       "is_config_required": true,
       "visible": true,
@@ -258,8 +258,8 @@
           "editable": true,
           "visible": true,
           "required": true,
-          "description": "Cloud service name such as AWSS3, Salesforce, Office365, etc.",
-          "tooltip": "Cloud service name such as AWSS3, Salesforce, Office365, etc.",
+          "description": "Specify the name of the cloud service, such as AWSS3, Salesforce, Office365, to filter results.",
+          "tooltip": "Specify the name of the cloud service, such as AWSS3, Salesforce, Office365, to filter results.",
           "isOnChange": false,
           "onchange": {}
         },
@@ -271,7 +271,7 @@
           "visible": true,
           "required": false,
           "tooltip": "By default, the value is 7 days before the current time. Difference between start time and end time should not be greater than 1 Year.",
-          "description": "(Optional) Specify the start time for search. Supported time formats: yyyy-MM-dd, yyyy-MM-ddTHH, yyyy-MM-ddTHH:mm:ssZ, yyyy-MM-ddTHH:mm:ss.SSSZ.",
+          "description": "(Optional) Select the start of the time range for the alert search in FortiCASB. Supported time formats: yyyy-MM-dd, yyyy-MM-ddTHH, yyyy-MM-ddTHH:mm:ssZ, yyyy-MM-ddTHH:mm:ss.SSSZ. ",
           "isOnChange": false,
           "onchange": {}
         },
@@ -283,7 +283,7 @@
           "visible": true,
           "required": false,
           "tooltip": "By default, the value is current time. Difference between start time and end time should not be greater than 1 Year.",
-          "description": "(Optional) Specify the end time for search. Supported time formats: yyyy-MM-dd, yyyy-MM-ddTHH, yyyy-MM-ddTHH:mm:ssZ, yyyy-MM-ddTHH:mm:ss.SSSZ.",
+          "description": "(Optional) Select the end of the time range for the alert search in FortiCASB. Supported time formats: yyyy-MM-dd, yyyy-MM-ddTHH, yyyy-MM-ddTHH:mm:ssZ, yyyy-MM-ddTHH:mm:ss.SSSZ",
           "isOnChange": false,
           "onchange": {}
         },
@@ -294,8 +294,8 @@
           "editable": true,
           "visible": true,
           "required": false,
-          "description": "Filter to search user email using a comma separated list.",
-          "tooltip": "Filter to search user email using a comma separated list.",
+          "description": "(Optional) Specify a comma-separated list of user emails to filter results.",
+          "tooltip": "(Optional) Specify a comma-separated list of user emails to filter results.",
           "isOnChange": false,
           "onchange": {}
         },
@@ -306,8 +306,8 @@
           "editable": true,
           "visible": true,
           "required": false,
-          "description": "Filter to search alert id using a comma separated list.",
-          "tooltip": "Filter to search alert id using a comma separated list.",
+          "description": "(Optional) Specify a comma-separated list of policies to filter results.",
+          "tooltip": "(Optional) Specify a comma-separated list of policies to filter results.",
           "isOnChange": false,
           "onchange": {}
         },
@@ -318,8 +318,8 @@
           "editable": true,
           "visible": true,
           "required": false,
-          "description": "Filter to search alert by severity using a comma separated list.",
-          "tooltip": "Filter to search alert by severity using a comma separated list.",
+          "description": "(Optional) Specify a comma-separated list of severities to filter results.",
+          "tooltip": "(Optional) Specify a comma-separated list of severities to filter results.",
           "isOnChange": false,
           "onchange": {}
         },
@@ -330,8 +330,8 @@
           "editable": true,
           "visible": true,
           "required": false,
-          "description": "Filter to search by status using a comma separated list.",
-          "tooltip": "Filter to search by status using a comma separated list.",
+          "description": "(Optional) Specify a comma-separated list of statuses to filter results.",
+          "tooltip": "(Optional) Specify a comma-separated list of statuses to filter results.",
           "isOnChange": false,
           "onchange": {}
         },
@@ -342,8 +342,8 @@
           "editable": true,
           "visible": true,
           "required": false,
-          "description": "Filter to search alert by alert IDs using a comma separated list.",
-          "tooltip": "Filter to search alert by alert IDs using a comma separated list.",
+          "description": "(Optional) Specify a comma-separated list of alert IDs to filter results.",
+          "tooltip": "(Optional) Specify a comma-separated list of alert IDs to filter results.",
           "isOnChange": false,
           "onchange": {}
         },
@@ -354,8 +354,8 @@
           "editable": true,
           "visible": true,
           "required": false,
-          "description": "Filter to search alert by business unit name.",
-          "tooltip": "Filter to search alert by business unit name.",
+          "description": "(Optional) Specify the business unit name to filter results.",
+          "tooltip": "(Optional) Specify the business unit name to filter results.",
           "isOnChange": false,
           "onchange": {}
         }
@@ -469,7 +469,7 @@
       "operation": "get_policies",
       "title": "Get Policies",
       "annotation": "get_policies",
-      "description": "Retrieve a list of all configured policies.",
+      "description": "Retrieve a list of all configured policies in FortiCASB.",
       "category": "investigation",
       "is_config_required": true,
       "visible": true,
@@ -648,7 +648,7 @@
       "operation": "search_activity",
       "title": "Search Activity",
       "annotation": "search_activity",
-      "description": "Retrieve activity logs with filtering and pagination.",
+      "description": "Retrieve activity logs with filtering and pagination, based on the specified input parameters.",
       "category": "investigation",
       "is_config_required": true,
       "visible": true,
@@ -662,7 +662,7 @@
           "visible": true,
           "required": false,
           "tooltip": "By default, the value is 7 days before the current time. Difference between start time and end time should not be greater than 1 Year.",
-          "description": "(Optional) Specify the start time for search. Supported time formats: yyyy-MM-dd, yyyy-MM-ddTHH, yyyy-MM-ddTHH:mm:ssZ, yyyy-MM-ddTHH:mm:ss.SSSZ.",
+          "description": "Select the start of the time range for the activity search in FortiCASB. Supported time formats: yyyy-MM-dd, yyyy-MM-ddTHH, yyyy-MM-ddTHH:mm:ssZ, yyyy-MM-ddTHH:mm:ss.SSSZ.",
           "isOnChange": false,
           "onchange": {}
         },
@@ -674,7 +674,7 @@
           "visible": true,
           "required": false,
           "tooltip": "By default, the value is current time. Difference between start time and end time should not be greater than 1 Year.",
-          "description": "(Optional) Specify the end time for search. Supported time formats: yyyy-MM-dd, yyyy-MM-ddTHH, yyyy-MM-ddTHH:mm:ssZ, yyyy-MM-ddTHH:mm:ss.SSSZ.",
+          "description": "Select the end of the time range for the activity search in FortiCASB. Supported time formats: yyyy-MM-dd, yyyy-MM-ddTHH, yyyy-MM-ddTHH:mm:ssZ, yyyy-MM-ddTHH:mm:ss.SSSZ",
           "isOnChange": false,
           "onchange": {}
         },
@@ -685,8 +685,8 @@
           "editable": true,
           "visible": true,
           "required": false,
-          "description": "Cloud service name such as AWSS3, Salesforce, Office365, etc.",
-          "tooltip": "Cloud service name such as AWSS3, Salesforce, Office365, etc.",
+          "description": "Specify the name of the cloud service such as AWSS3, Salesforce, Office365, to filter results.",
+          "tooltip": "Specify the name of the cloud service such as AWSS3, Salesforce, Office365, to filter results.",
           "isOnChange": false,
           "onchange": {}
         },
@@ -697,8 +697,8 @@
           "editable": true,
           "visible": true,
           "required": false,
-          "description": "Filter to search by activity id using a comma separated list.",
-          "tooltip": "Filter to search by activity id using a comma separated list.",
+          "description": "Specify a comma-separated list of activity IDs to filter results.",
+          "tooltip": "Specify a comma-separated list of activity IDs to filter results.",
           "isOnChange": false,
           "onchange": {}
         },
@@ -709,8 +709,8 @@
           "editable": true,
           "visible": true,
           "required": false,
-          "description": "Filter to search by activity type using a comma separated list (e.g. Upload File, Delete File, Restore File, Download File, Share File, Copy File, Add Folder).",
-          "tooltip": "Filter to search by activity type using a comma separated list (e.g. Upload File, Delete File, Restore File, Download File, Share File, Copy File, Add Folder).",
+          "description": "Specify a comma-separated list of activity types (e.g., Upload File, Delete File, Restore File, Download File, Share File, Copy File, Add Folder) to filter results.",
+          "tooltip": "Specify a comma-separated list of activity types (e.g., Upload File, Delete File, Restore File, Download File, Share File, Copy File, Add Folder) to filter results.",
           "isOnChange": false,
           "onchange": {}
         },
@@ -721,8 +721,8 @@
           "editable": true,
           "visible": true,
           "required": false,
-          "description": "Filter to search by IP address using a comma separated list.",
-          "tooltip": "Filter to search by IP address using a comma separated list.",
+          "description": "Specify a comma-separated list of IP addresses to filter results.",
+          "tooltip": "Specify a comma-separated list of IP addresses to filter results.",
           "isOnChange": false,
           "onchange": {}
         }
